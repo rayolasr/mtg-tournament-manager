@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
+	"magic-tournament/logic"
 	"strings"
 	"time"
-
-	"magic-tournament/logic" // Cambia esto si tienes otro nombre de módulo
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -45,6 +44,7 @@ func main() {
 	)
 
 	output := widget.NewMultiLineEntry()
+	output.SetMinRowsVisible(15)
 	output.SetPlaceHolder("Clasificación y resumen aparecerán aquí")
 
 	addMatch := widget.NewButton("Añadir partida", func() {
